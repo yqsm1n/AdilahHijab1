@@ -11,7 +11,7 @@ if (!isset($_SESSION["intLine"]))
     $_SESSION["strProduct_id"][0] = $_GET["product_id"];        //รหัสสินค้า
     $_SESSION["strProduct_size"][0] = $_GET["product_size"];    //ไซต์สินค้า
     $_SESSION["strQty"][0] = 1;                                 //จำนวนสินค้า
-   // header("location:product_cart.php");
+    header("location:product_cart.php");
 
 //เพิ่มสินค้า-จำนวนสินค้า
 } else {
@@ -30,6 +30,6 @@ if (!isset($_SESSION["intLine"]))
         
     }
 
-    //header("location:product_cart.php");
+    header("location:product_cart.php");
 }
 ?> 

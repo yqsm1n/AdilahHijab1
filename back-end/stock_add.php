@@ -88,7 +88,7 @@ select {
                     </div>
                     <!-- ส่วนเนื้อหาของการ์ด -->     
                     <div class="card-body"> 
-                        <form name="form1" method="POST" action="update_stock.php"> <!-- FORM -->
+                        <form name="form1" method="POST" action="stock_update.php"> <!-- FORM -->
                             <div class="row mb-2">
                                 <div class="col-md">
                                     <div class="form-floating my-3">
@@ -120,16 +120,12 @@ select {
                                             <input style="padding: 12px; border-radius: 5px; border: 1px solid #ccc; width: 100px; margin-left: 10px; margin-right: 10px;" class="form-control" name="pnumXL" type="number" />ตัว
                                         </div>
                                         <div class="form-floating my-3" style="display: flex; align-items: center;"> 
-                                            <p style="font-family: 'Sarabun', sans-serif; color: #333; font-size: 16px; margin: 0;">Over size</p>
+                                            <p style="font-family: 'Sarabun', sans-serif; color: #333; font-size: 16px; margin: 20;">Over size</p>
                                             <input style="padding: 12px; border-radius: 5px; border: 1px solid #ccc; width: 100px; margin-left: 10px; margin-right: 10px;" class="form-control" name="pnumOVER" type="number" />ตัว
                                         </div>
                                     </div> 
 
-                                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-                                        <button style="margin-right: 10px; background-color: red; color: white; border: none; padding: 15px 30px;
-                                            text-align: center; text-decoration: none; font-size: 16px; transition-duration: 0.4s;
-                                            cursor: pointer; border-radius: 12px;" onclick="window.location.href='Stock_product.php'">ยกเลิก
-                                        </button>
+                                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 8px;">
                                         <button style="margin-right: 10px; background-color: green; color: white; border: none; padding: 15px 30px;
                                             text-align: center; text-decoration: none; font-size: 16px; transition-duration: 0.4s;
                                             cursor: pointer; border-radius: 12px;" type="submit">บันทึกข้อมูล
@@ -138,6 +134,12 @@ select {
                                 </div>
                             </div>
                         </form>
+                        
+                        <div style="display: flex; justify-content: center;">
+                            <a href="stock_product.php" style="background-color: red; color: white; border: none; padding: 15px 30px;
+                            text-align: center; text-decoration: none; font-size: 16px; transition-duration: 0.4s;cursor: pointer; border-radius: 12px;">ยกเลิก</a>
+                        </div>
+
                     </div>
                 </div>
             </div>

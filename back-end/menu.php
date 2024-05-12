@@ -71,7 +71,7 @@ body {font-family:  'Sarabun', sans-serif; }
                 </a>
                     <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav" style="color:#FDF5E6;">
-                            <a class="nav-link" style="color:#FDF5E6;" href="show_product.php">สินค้าทั้งหมด</a>
+                            <a class="nav-link" style="color:#FDF5E6;" href="product_show.php">สินค้าทั้งหมด</a>
                             <a class="nav-link" style="color:#FDF5E6;" href="category_show.php">ประเภทสินค้า</a>
                             <a class="nav-link" style="color:#FDF5E6;" href="size/show_product_size.php">ไซต์สินค้า</a>
                             <a class="nav-link" style="color:#FDF5E6;" href="stock_product.php">สต๊อกสินค้า</a>
@@ -87,7 +87,7 @@ body {font-family:  'Sarabun', sans-serif; }
                 </a>
                     <div class="collapse" id="collapseLayouts3" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav" style="color:#FDF5E6;">
-                            <a class="nav-link" style="color:#FDF5E6;" href="show_order.php">รายการสั่งซื้อ</a>
+                            <a class="nav-link" style="color:#FDF5E6;" href="order_show.php">รายการสั่งซื้อ</a>
                         </nav>
                     </div>
 
@@ -112,7 +112,7 @@ body {font-family:  'Sarabun', sans-serif; }
                 </a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">  
-                        <a class="nav-link" style="color:#FDF5E6;" href="show_order.php">รายงานการสั่งสินค้า</a>
+                        <a class="nav-link" style="color:#FDF5E6;" href="order_show.php">รายงานการสั่งสินค้า</a>
                         <a class="nav-link" style="color:#FDF5E6;" href="report_sale1.php">รายงานการขายสินค้า</a>
                         <a class="nav-link" style="color:#FDF5E6;" href="pro_stock.php">รายงานสินค้าใกล้หมด</a>
                     </nav>                                    

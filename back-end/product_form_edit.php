@@ -33,7 +33,7 @@ include '../connect.php';
                             <h3 style="font-family: 'Sarabun', sans-serif; font-weight: bold; color: #333; font-size: 28px; " class="text-center font-weight-light my-4">แก้ไขข้อมูลสินค้า</h3>
                         </div>                
                             <div class="card-body"> 
-                                <form method="POST" action="product_insert.php" enctype="multipart/form-data"> 
+                                <form method="POST" action="product_update.php" enctype="multipart/form-data"> 
                                     <div class="row mb-2">
                                         <div class="col-md">
                                         
@@ -145,7 +145,7 @@ include '../connect.php';
                                         </div>
                                                     
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0 ">
-                                                <button type="submit" name="save_product" class="btn btn-primary " style="font-family: 'Sarabun', sans-serif; font-weight: bold; background-color: #35B752;  border-color: #35B752; padding: 10px 50px;">อัพเดตข้อมูล</button>
+                                                <button type="submit" name="product_update" class="btn btn-primary " style="font-family: 'Sarabun', sans-serif; font-weight: bold; background-color: #35B752;  border-color: #35B752; padding: 10px 50px;">อัพเดตข้อมูล</button>
                                             </div>
                                         </div>
                                     </div>

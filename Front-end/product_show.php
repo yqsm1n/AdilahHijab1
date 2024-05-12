@@ -19,6 +19,9 @@ header("Location:user_login.php");
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .card{
+            margin-bottom: 20px;
+        }
         .button {
             margin-top: 20px; /* ปรับค่าตามต้องการ */
             width: 50px; 

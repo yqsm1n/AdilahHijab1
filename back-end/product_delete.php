@@ -9,7 +9,7 @@ $product_id = $_GET['product_id'];
 $sql= "DELETE FROM product WHERE product_id = $product_id ";
 if(mysqli_query($conn,$sql)){
     echo"<script>alert('ลบสินค้าเรียบร้อยแล้ว');</script>";
-    echo"<script>window.location='show_product.php';</script>";
+    echo"<script>window.location='product_show.php';</script>";
 }else{
     echo "Error :" . $sql."<br>" . mysqli_error($conn);
     echo "<script>alert('ไม่สามารถลบสินค้าได้')</script>";

@@ -101,7 +101,7 @@ include '../connect.php';
                 <meta charset="UTF-8">
                 <button charset="UTF-8" style="background-color:green; color: white; border: none; padding: 15px 30px;
                                 text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 15px 2px;
-                                transition-duration: 0.4s; cursor: pointer; border-radius: 12px;" onclick="location.href='form_category.php'">เพิ่มประเภทสินค้า</button>
+                                transition-duration: 0.4s; cursor: pointer; border-radius: 12px;" onclick="location.href='category_form_insert.php'">เพิ่มประเภทสินค้า</button>
 
                 <!------------------------------------------------------ หัวข้อตารางแสดงข้อมูลสินค้า ------------------------------------------------------------------->
                 <div class="card mb-4">

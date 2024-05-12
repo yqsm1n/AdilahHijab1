@@ -17,7 +17,7 @@ if(isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         // ล็อกอินสำเร็จ
         $_SESSION['user_name'] = $user_name;
-        header("Location: ../front-end/view_product.php"); // ส่งไปยังหน้า Dashboard
+        header("Location: ../front-end/product_show.php"); // ส่งไปยังหน้า Dashboard
         exit(); // ออกจากสคริปต์
     } else {
         // ล็อกอินไม่สำเร็จ

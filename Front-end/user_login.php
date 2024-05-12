@@ -109,7 +109,7 @@ session_start();
     
     <div class="card">
         <h3>เข้าสู่ระบบ</h3>
-        <form method="POST" action="login_check.php">
+        <form method="POST" action="user_login_check.php">
     <div class="form-floating my-3"> 
         <input class="form-control" name="user_name" type="text" placeholder="Enter your name" />
         <label for="">ชื่อผู้ใช้งาน</label>

@@ -68,7 +68,7 @@
                                         <td><?= $row['size_XL'] ?></td>
                                         
                                         <td>
-                                            <a href="addStock.php?id=<?=$row['product_id']?>"  style="background-color:Green; color: white; border: none; padding: 10px 10px;
+                                            <a href="stock_add.php?id=<?=$row['product_id']?>"  style="background-color:Green; color: white; border: none; padding: 10px 10px;
                                                 text-align: center; text-decoration: none; display: inline-block; font-size: 12px; margin: 8px 2px;
                                                 transition-duration: 0.4s; cursor: pointer; border-radius: 12px;">เพิ่มสต๊อก</a>
                                         </td>

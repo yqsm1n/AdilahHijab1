@@ -23,23 +23,17 @@
                     </div>
                     <div>
                     <br>
-                    <a href="show_order_yes.php"><button type="button" class="btn btn-outline-success" style="margin-left: 20px;">ชำระเงินเรียบร้อย</button></a>
-                    <a href="show_order.php"><button type="button" class="btn btn-outline-success">ยังไม่ชำระเงิน</button></a>
-                    <a href="show_order_no.php"><button type="button" class="btn btn-outline-success">ยกเลิกคำสั่งซื้อ</button></a>
+                    <a href="order_yes.php"><button type="button" class="btn btn-outline-success" style="margin-left: 20px;">ชำระเงินเรียบร้อย</button></a>
+                    <a href="order_show.php"><button type="button" class="btn btn-outline-success">ยังไม่ชำระเงิน</button></a>
+                    <a href="order_no.php"><button type="button" class="btn btn-outline-success">ยกเลิกคำสั่งซื้อ</button></a>
                 </div>
                     <div class="card-body">
                         <table id="DataTable" class="table table-striped">
                             <thead>
                                 <tr style="text-align: center; font-size: 12px;">
-                                    <th>เลขที่ใบสั่งซื้อ</th>
-                                    <th>ชื่อ</th>
-                                    <th>นามสกุล</th>
-                                    <th>เลขที่</th>
-                                    <th>หมู่</th>
-                                    <th>ตำบล</th>
-                                    <th>อำเภอ</th>
-                                    <th>จังหวัด</th>
-                                    <th>รหัสไปรษณีย์</th>
+                                <th>เลขที่ใบสั่งซื้อ</th>
+                                    <th>ชื่อ-นามสกุล</th>
+                                    <th>ที่อยู่</th>
                                     <th>เบอร์โทรศัพท์</th>
                                     <!-- <th>username</th> -->
                                     <th>ราคารวม</th>
@@ -65,16 +59,10 @@
                             ?>
                                 <tbody>
                                     <tr style="text-align: center; font-size: 12px;">
-                                        <td><?= $row['orderID'] ?></td>
-                                        <td><?= $row['first_name'] ?></td>
-                                        <td><?= $row['last_name'] ?></td>
-                                        <td><?= $row['number_address'] ?></td>
-                                        <td><?= $row['moo_address'] ?></td>
-                                        <td><?= $row['district_address'] ?></td>
-                                        <td><?= $row['amphoe_address'] ?></td>
-                                        <td><?= $row['province_address'] ?></td>
-                                        <td><?= $row['postalcode'] ?></td>
-                                        <td><?= $row['user_telephone'] ?></td>
+                                    <td><?= $row['orderID'] ?></td>
+                                        <td><?= $row['first_name'] ?> <?= $row['last_name'] ?></td>   
+                                        <td><?= $row['number_address'] ?> ม.<?= $row['moo_address'] ?> ต.<?= $row['district_address'] ?> อ.<?= $row['amphoe_address'] ?> จ.<?= $row['province_address'] ?> <?= $row['postalcode'] ?></td>
+                                        <td>0<?= $row['user_telephone'] ?></td>
                                       <!--  <td><?= $row['user_name'] ?></td>  -->
                                         <td><?= $row['total_price'] ?></td>
                                         <td><?= $row['slip_img'] ?></td>

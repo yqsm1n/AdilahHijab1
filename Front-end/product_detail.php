@@ -178,7 +178,7 @@ if (isset($_GET['product_id'])) {
                         
 
                         <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10 ml-auto">
-						<a type="submit" href="order.php?product_id=<?= $row['product_id'] ?>&product_size=<?= $_GET['product_size'] ?>">
+						<a type="submit" href="order.php?product_id=<?= $row['product_id'] ?>">
     <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
         <i class="fa-solid fa-cart-plus fa-xl" style="color: #ffffff;"></i> เพิ่มลงตะกร้า
     </button>

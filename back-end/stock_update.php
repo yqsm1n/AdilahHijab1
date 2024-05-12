@@ -11,9 +11,10 @@ $sql = "UPDATE product SET size_s = size_s + $numS, size_m = size_m + $numM, siz
 $hand = mysqli_query($conn,$sql);
 if($hand){
     echo "<script> alert('อัปเดตจำนวนสินค้าแล้ว');</script>";
-    echo "<script> window.location='Stock_product.php';</script>";
+    echo "<script> window.location='stock_product.php';</script>";
 }else{
     echo "<script> alert('ไม่สามารถอัปเดตจำนวนสินค้าได้');</script>";
+    
 }
 mysqli_close($conn);
 ?>
