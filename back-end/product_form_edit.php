@@ -88,7 +88,7 @@ include '../connect.php';
                                                 <label for="product_img2" style="font-weight: bold; color: #333; font-size: 16px; margin-bottom: 8px;"></label>
                                                 <img src="../img/<?=$rs['product_img2']?>" width="100px" height="150px"><br><br>
                                                 <input type="file" id="image" name="product_img2" accept="image/*" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc; width: 100%; margin-bottom: 12px;">
-                                                <input type="hidden"name="txtimg" class="form-control" value=<?=$rs['product_img2']?>  />
+                                                <input type="hidden"name="txtimg2" class="form-control" value=<?=$rs['product_img2']?>  />
                                             </div>
 
                                             <div class="form-floating my-3"> 
@@ -96,7 +96,7 @@ include '../connect.php';
                                                 <label for="product_img3" style="font-weight: bold; color: #333; font-size: 16px; margin-bottom: 8px;"></label>
                                                 <img src="../img/<?=$rs['product_img3']?>" width="100px" height="150px"><br><br>
                                                 <input type="file" id="image" name="product_img3" accept="image/*" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc; width: 100%; margin-bottom: 12px;">
-                                                <input type="hidden"name="txtimg" class="form-control" value=<?=$rs['product_img3']?>  />
+                                                <input type="hidden"name="txtimg3" class="form-control" value=<?=$rs['product_img3']?>  />
                                             </div>
 
                                             

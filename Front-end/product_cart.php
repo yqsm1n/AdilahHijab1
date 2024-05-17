@@ -5,6 +5,7 @@ if (isset($_SESSION['user_name'])) {
     $user_name = $_SESSION['user_name'];
 }  // ถ้าไม่ได้ล็อกอิน ให้ redirect กลับไปที่หน้า login
 
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +65,7 @@ if (isset($_SESSION['user_name'])) {
 							<th>ลำดับที่</th>
 							<th class="column-1"></th>
 							<th class="column-2">ชื่อสินค้า</th>
-                           <th class="column-3">ไซต์</th>
+                           	<th class="column-3">ไซต์</th>
                             <th class="column-4">สี</th>
 							<th class="column-5">ราคา</th>
 							<th class="column-6 ">จำนวน</th>
@@ -104,8 +105,8 @@ if (isset($_SESSION['user_name'])) {
                                 </div>
                             </td>
                             <td class="column-2"><?=$row_pro['product_name']?></td>
+							<td class="column-3"><?=$_SESSION["strProduct_size"][$i]?></td>
 
-							<td class="column-3"><?echo $_GET["product_size"];?></td>
                             <td class="column-4"><?=$row_pro['product_color']?></td>
                             <td class="column-5"><?=$row_pro['product_price']?></td>
                             <td class="column-6">

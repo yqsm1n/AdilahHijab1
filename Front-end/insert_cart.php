@@ -35,7 +35,8 @@ if (isset($_SESSION['sum_price'])) {
 
     // ดำเนินการในฐานข้อมูล: บันทึกข้อมูลลงในตาราง "order"
     if (mysqli_query($conn, $insert_sql)) {
-       // หา order_id ที่เพิ่งเพิ่มเข้าไปในฐานข้อมูล
+       
+        // หา order_id ที่เพิ่งเพิ่มเข้าไปในฐานข้อมูล
         $order_result = mysqli_query($conn, "SELECT LAST_INSERT_ID() as order_id");
         $order_row = mysqli_fetch_assoc($order_result);
         $orderID = $order_row['order_id'];
@@ -54,16 +55,38 @@ if (isset($_SESSION['sum_price'])) {
                 if ($row1) {
                     $product_price = $row1['product_price'];
                     $total = $_SESSION["strQty"][$i] * $product_price;
+                    $_SESSION["strProduct_size"][$i];
 
                     // INSERT ข้อมูลในตาราง order_detail
-                    $sql2 = "INSERT INTO order_detail (orderID, product_id, product_price, orderQty, Total)
-                             VALUES ('$orderID', '".$_SESSION["strProduct_id"][$i]."', '$product_price', '".$_SESSION["strQty"][$i]."', '$total')";
+                    $sql2 = "INSERT INTO order_detail (orderID, product_id, product_size, product_price, orderQty, Total)
+                             VALUES ('$orderID', '".$_SESSION["strProduct_id"][$i]."','".$_SESSION["strProduct_size"][$i]."', '$product_price', '".$_SESSION["strQty"][$i]."', '$total')";
                     mysqli_query($conn, $sql2);
 
-                    // ตัดสต็อกสินค้า
-                    $sql3 = "UPDATE product SET product_amount = product_amount - '".$_SESSION["strQty"][$i]."'
-                             WHERE product_id = '".$_SESSION["strProduct_id"][$i]."'";
-                    mysqli_query($conn, $sql3);
+                    
+                    // ตรวจสอบไซต์ที่เลือกและตัดสต็อกตาม
+                    switch ($_SESSION["strProduct_size"][$i]) {
+                        case 'S':
+                            $sizeColumn = 'size_s';
+                            break;
+                        case 'M':
+                            $sizeColumn = 'size_m';
+                            break;
+                        case 'L':
+                            $sizeColumn = 'size_L';
+                            break;
+                        case 'XL':
+                            $sizeColumn = 'size_XL';
+                            break;
+                        case 'Over Size':
+                            $sizeColumn = 'over_size';
+                            break;
+                    }
+
+                    // ตัดสต็อกสินค้าตามจำนวนและไซส์ที่เลือก
+                    $sql3 = "UPDATE product 
+                    SET ".$sizeColumn." = ".$sizeColumn." - '".$_SESSION["strQty"][$i]."'
+                    WHERE product_id = '".$_SESSION["strProduct_id"][$i]."'";
+                    mysqli_query($conn, $sql3);          
                 } else {
                     echo "<script> alert('Error fetching product information.') </script>";
                 }
@@ -71,7 +94,7 @@ if (isset($_SESSION['sum_price'])) {
         }
 
         echo "<script> alert('บันทึกข้อมูลเรียบร้อยแล้ว') </script>";
-        echo "<script> window.location='print_order.php';</script>";
+        echo "<script> window.location='paymentt.php';</script>";
 
         // ล้าง Session
         unset($_SESSION["intLine"]);

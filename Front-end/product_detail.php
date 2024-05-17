@@ -22,7 +22,7 @@ if (isset($_GET['product_id'])) {
         <html lang="en">
         <?php include 'head.php' ?>
         <style>
-            .button {
+            button {
                 margin-top: 20px;
                 width: 50px;
                 color: white;
@@ -35,55 +35,22 @@ if (isset($_GET['product_id'])) {
                 margin: 8px 2px;
                 transition-duration: 0.4s;
                 cursor: pointer;
-                border-radius: 12px;
+                border-radius: 23px;
+                font-size: 16px;
+                background-color: #ff5733;
+                transition: background-color 0.3s ease;
             }
 
-            .button1 {
-                background-color: white;
-                color: black;
-                border: 2px solid #04AA6D;
+            /* เพิ่ม CSS เมื่อ hover บนปุ่ม */
+            button:hover {
+                background-color: #ff7f50; /* เปลี่ยนเป็นสีที่คุณต้องการ */
             }
 
-            .button1:hover {
-                background-color: #04AA6D;
-                color: white;
-            }
+            
 
-            .button2 {
-                background-color: white;
-                color: black;
-                border: 2px solid #04AA6D;
-            }
-
-            .button2:hover {
-                background-color: #04AA6D;
-                color: white;
-            }
-
-            .button3 {
-                background-color: white;
-                color: black;
-                border: 2px solid #04AA6D;
-            }
-
-            .button3:hover {
-                background-color: #04AA6D;
-                color: white;
-            }
-
-            .button4 {
-                background-color: white;
-                color: black;
-                border: 2px solid #04AA6D;
-            }
-
-            .button4:hover {
-                background-color: #04AA6D;
-                color: white;
-            }
         </style>
 
-        <body class="animsition">
+<body class="animsition">
             <?php include 'menu1.php'; ?>
             <!-- Product Detail -->
             <div class="container bgwhite p-t-35 p-b-80">
@@ -136,29 +103,25 @@ if (isset($_GET['product_id'])) {
                                     <div class="flex-m flex-w p-b-10">
                                         <label style="font-family: 'Sarabun', sans-serif; font-weight: bold; color: #333; font-size: 16px;">Size : </label>
                                         <select name="product_size" style="padding: 12px; font-family: 'Sarabun', sans-serif; border-radius: 5px; border: 1px solid #ccc; width: 400px; margin:15px;">
-                                            <option value="S">S</option>
+                                        <option selected >Select Size</option>    
+                                        <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
                                             <option value="XL">XL</option>
                                             <option value="Over Size">Over Size</option>
                                         </select>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
+                                    <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
+                                        <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+                                                รายละเอียดไซต์สินค้า
+                                                <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+                                                <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+                                        </h5>
 
-                        <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
-                            <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-                                รายละเอียดไซต์สินค้า
-                                <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-                                <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
-                            </h5>
-
-                            <div class="dropdown-content dis-none p-t-15 p-b-23">
-                                <img src="../img/table_size.jpg" width="500px" height="200px">
-                            </div>
-                        </div> 
-                        
+                                        <div class="dropdown-content dis-none p-t-15 p-b-23">
+                                            <img src="../img/table_size.jpg" width="500px" height="200px">
+                                        </div>
+                                    </div> 
                         
                         <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
                             <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
@@ -168,27 +131,24 @@ if (isset($_GET['product_id'])) {
                             </h5>
 
                             <div class="dropdown-content dis-none p-t-15 p-b-23">
-                                <p class="s-text8">
+                                <p class="s-text18">
                                     <?= $row['product_detail'] ?>
                                 </p>
                             </div>
                         </div><br></br>
+                   
 
-
-                        
-
-                        <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10 ml-auto">
-						<a type="submit" href="order.php?product_id=<?= $row['product_id'] ?>">
-    <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-        <i class="fa-solid fa-cart-plus fa-xl" style="color: #ffffff;"></i> เพิ่มลงตะกร้า
-    </button>
-</a>
-
-                            
+                                    <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-30">
+                                        <input type="hidden" name="product_id" value="<?= $row['product_id'] ?>">
+                                        <button type="submit" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            <i class="fa-solid fa-cart-plus fa-xl" style="color: #ffffff; "></i> เพิ่มลงตะกร้า
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+
                         
-    
-    
 
                     </div>
                 </div>
@@ -196,22 +156,18 @@ if (isset($_GET['product_id'])) {
             </div>
             </div>
             </div>
-    <?php
+
+        </body>
+
+        </html>
+<?php
     } else {
         echo "ไม่พบข้อมูลสินค้า";
     }
 } else {
     echo "Product ID is not set";
 }
-    ?>
-
-
-
-
-
-
-
-
+?>
 
     <!--===============================================================================================-->
     <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>

@@ -100,9 +100,7 @@ if (isset($_SESSION['user_name'])) {
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid justify-content-center">
         <ul class="navbar-nav">
-            <il class="nav-item">
-                <a class="nav-link" href="#">โปรโมชั่น</a>
-            </il>
+           
             <il class="nav-item">
                 <a class="nav-link" href="view_product.php">สินค้าทั้งหมด</a>
             </il>
